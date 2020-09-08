@@ -6,9 +6,9 @@ The app makes use of libraries like Retrofit for getting data from the server an
 **Concepts applied**
 
 
-ViewPager
-RecyclerView
-Fragments
+ViewPager,
+RecyclerView,
+Fragments,
 ProgressBar
 
 The Screenshots of the projects are included below:
