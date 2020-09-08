@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Gads practice project(maroafenogho)</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hours">Learning Leaders</string>
+    <string name="iq">Skill IQ Leaders</string>
+    <string name="learning_hours"> learning hours,</string>
+    <string name="score">skill iq score,</string>
+    <string name="sub_success">Submission Successful</string>
+    <string name="sub_failed">Submission not Successful</string>
+    <string name="project_submission">Project Submission</string>
+    <string name="last_name">Last Name</string>
+    <string name="email_address">Email Address</string>
+    <string name="project_on_github_link">Project on GITHUB (link)</string>
+    <string name="submit">Submit</string>
+    <string name="connection_error_message">Error reaching server. Please check internet connection and try again</string>
+    <string name="reload">Refresh</string>
+    <string name="first_name">First Name</string>
+</resources>
