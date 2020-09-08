@@ -4,6 +4,8 @@ The app makes use of libraries like Retrofit for getting data from the server an
 
 
 **Concepts applied**
+
+
 ViewPager
 RecyclerView
 Fragments
@@ -15,7 +17,7 @@ The Screenshots of the projects are included below:
 <img src="./hours.png">
 <img src="./iqleaders.png">
 <img src="./error.png">
-<img src="./confirmdialog.png">
 <img src="./submission.png">
+<img src="./confirmdialog.png">
 <img src="./successful.png">
 <img src="./failed.png">
