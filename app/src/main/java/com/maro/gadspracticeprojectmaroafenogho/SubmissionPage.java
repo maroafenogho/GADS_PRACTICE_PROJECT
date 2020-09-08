@@ -105,14 +105,13 @@ public class SubmissionPage extends AppCompatActivity {
                     showSuccessDialog();
                 } else if(response.code()==400){
                     showFailureDialog();
-                    Toast.makeText(SubmissionPage.this, "Sad " + response, Toast.LENGTH_LONG).show();
+                    Toast.makeText(SubmissionPage.this, "Please enter a valid email and link", Toast.LENGTH_SHORT).show();
                     Log.d("Error", "onResponse: "+ response);
                 }
             }
 
             @Override
             public void onFailure(Call<ResponseBody> call1, Throwable t) {
-                Toast.makeText(SubmissionPage.this, t.toString(), Toast.LENGTH_SHORT).show();
 
             }
         });
