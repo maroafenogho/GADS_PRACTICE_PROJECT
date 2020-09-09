@@ -35,7 +35,7 @@ public class SubmissionPage extends AppCompatActivity {
 
     TextInputEditText email, firstName, lastName, projectLink;
     ProgressBar progressBar;
-    Button submit, ok;
+    Button submit, ok, feedbackOk;
     ImageView cancel, backArrow;
     ImageView success;
     TextView done;
@@ -78,17 +78,23 @@ public class SubmissionPage extends AppCompatActivity {
 
     }
 
-    private void showFailureDialog() {
-        progressBar.setVisibility(View.GONE);
+    private void questionDialog(){
         AlertDialog.Builder builder = new AlertDialog.Builder(SubmissionPage.this);
-        View view = View.inflate(this, R.layout.feedback,null);
+        View view = View.inflate(this, R.layout.submit_question,null);
         builder.setView(view);
+        cancel = view.findViewById(R.id.cancel);
+        ok = view.findViewById(R.id.ok_button);
         AlertDialog dialog = builder.create();
         dialog.show();
-        success = view.findViewById(R.id.feedback_image);
-        done = view.findViewById(R.id.feedback_textView);
-        success.setImageResource(R.drawable.ic_baseline_warning_24);
-        done.setText(R.string.sub_failed);
+        cancel.setOnClickListener(v -> {
+            dialog.dismiss();
+
+        });
+        ok.setOnClickListener(v -> {
+            performSubmission();
+            progressBar.setVisibility(View.VISIBLE);
+            dialog.dismiss();
+        });
     }
 
     private void performSubmission(){
@@ -116,23 +122,22 @@ public class SubmissionPage extends AppCompatActivity {
             }
         });
     }
-    private void questionDialog(){
+
+    private void showFailureDialog() {
+        progressBar.setVisibility(View.GONE);
         AlertDialog.Builder builder = new AlertDialog.Builder(SubmissionPage.this);
-        View view = View.inflate(this, R.layout.submit_question,null);
+        View view = View.inflate(this, R.layout.feedback,null);
         builder.setView(view);
-       cancel = view.findViewById(R.id.cancel);
-        ok = view.findViewById(R.id.ok_button);
         AlertDialog dialog = builder.create();
         dialog.show();
-        cancel.setOnClickListener(v -> {
-            dialog.dismiss();
-
+        feedbackOk = view.findViewById(R.id.ok_);
+        feedbackOk.setOnClickListener(v -> {
+            finish();
         });
-        ok.setOnClickListener(v -> {
-            performSubmission();
-            progressBar.setVisibility(View.VISIBLE);
-            dialog.dismiss();
-        });
+        success = view.findViewById(R.id.feedback_image);
+        done = view.findViewById(R.id.feedback_textView);
+        success.setImageResource(R.drawable.ic_baseline_warning_24);
+        done.setText(R.string.sub_failed);
     }
 
     private void showSuccessDialog() {
@@ -142,10 +147,13 @@ public class SubmissionPage extends AppCompatActivity {
         builder.setView(view);
         AlertDialog dialog = builder.create();
         dialog.show();
+        feedbackOk = view.findViewById(R.id.ok_);
+        feedbackOk.setOnClickListener(v -> {
+            finish();
+        });
         success = view.findViewById(R.id.feedback_image);
         done = view.findViewById(R.id.feedback_textView);
         success.setImageResource(R.drawable.ic_baseline_check_circle_24);
         done.setText(R.string.sub_success);
     }
-
 }

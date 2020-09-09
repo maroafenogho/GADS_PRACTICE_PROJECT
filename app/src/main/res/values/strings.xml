@@ -16,4 +16,6 @@
     <string name="connection_error_message">Error reaching server. Please check internet connection and try again</string>
     <string name="reload">Refresh</string>
     <string name="first_name">First Name</string>
+    <string name="ok">OK</string>
+    <string name="are_you_sure">Are you sure?</string>
 </resources>
