@@ -8,5 +8,7 @@
     <color name="black"> #000 </color>
     <color name="orange">#EF9B43</color>
     <color name="link_blue">#304FFE</color>
+    <color name="transparent">#00000000</color>
+
 
 </resources>

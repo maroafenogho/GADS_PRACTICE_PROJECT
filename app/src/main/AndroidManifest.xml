@@ -17,6 +17,8 @@
         <activity
             android:name=".MainActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+<!--            android:theme="@style/Theme.AppCompat.Light.NoActionBar"-->
+
 
         <activity android:name=".SplashScreen"
             android:theme="@style/Submission" >

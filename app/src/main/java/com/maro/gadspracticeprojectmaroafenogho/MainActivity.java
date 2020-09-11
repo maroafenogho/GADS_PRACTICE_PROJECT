@@ -19,15 +19,11 @@ import com.google.android.material.tabs.TabLayoutMediator;
 public class MainActivity extends AppCompatActivity {
 
     FragmentPagerAdapter adapter;
-    ProgressBar progressBar;
-    TextView loading;
     TextView submit;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-//        vPager = findViewById(R.id.viewpager);
 
         submit = findViewById(R.id.submit_button);
         submit.setOnClickListener(v -> {
